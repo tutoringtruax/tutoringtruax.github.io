@@ -1,0 +1,262 @@
+/* Overarching */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: "Baskervville", serif;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+}
+
+body {
+    background-color: #F2F3F4;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 48rem;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Title */
+#title {
+    text-align: center;
+}
+
+#title h1 {
+    font-size: clamp(2.7rem, 4.8vw, 3.3rem);
+}
+
+/* Intro */
+#intro {
+    display: grid; 
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+#image {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1080px) {
+    #intro {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #image {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #image img {
+        max-height: 30vh;
+        width: auto;
+    }
+}
+
+
+#text, #packages, #faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0.5rem;
+}
+
+/* Graphics */
+#graphics {
+    display: flex;
+    flex-basis: auto;
+}
+
+#donut {
+    display: flex;
+    flex-basis: 33%;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.donut {
+    stroke-dasharray: 440;
+}
+
+#donutcontainer {
+    position: relative;
+}
+
+#donutcontainer h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-70%);
+}
+
+#bar {
+    flex: 1;
+    flex-basis: 33%;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#barchart {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#barchart > .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#b1, #b2, #b3 {
+    background-color: #000;
+    border-radius: 4px;
+    width: 3rem;
+    color: white;
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#students, #students th, #students td {
+    border-spacing: 0px;
+    border: 0px solid #000;
+}
+
+#students tr:nth-child(even) {
+    background-color: #ffffff00;
+}
+
+#students td {
+    padding: 0rem;
+    margin: 0rem;
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+    border-spacing: 0px;
+}
+
+#students tr {
+    padding: 0rem;
+    margin: 0rem;
+    border-spacing: 0px;
+    line-height: 14px;
+}
+
+#b1 {
+    height: 10vh;
+}
+
+#b2 {
+    height: 13.9vh;
+}
+
+#b3 {
+    font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+    height: 20.9vh;
+}
+
+#barchart > .col p {
+    font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+}
+
+#dots {
+    display: flex;
+    flex-basis: 33%;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* FAQ */
+#faq p {
+    font-size: clamp(0.8rem, 1.5vw, 1.0rem);
+}
+
+#faq p i {
+    font-size: clamp(0.8rem, 1.5vw, 1.0rem);
+}
+
+/* Packages */
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+/* Overall */
+h1 {
+    font-size: clamp(1.8rem, 3.2vw, 2.2rem);
+    letter-spacing: -0.08rem;
+    font-weight: 700;
+}
+
+p { 
+    hyphens: auto;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: -0.01rem;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+b {
+    font-weight: 700;
+}
+
+.sc {
+    font-family: "Baskervville SC", serif;
+}
