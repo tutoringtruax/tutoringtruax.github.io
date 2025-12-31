@@ -75,6 +75,10 @@ body {
         max-height: 30vh;
         width: auto;
     }
+
+    #dots {
+        display: none;
+    }
 }
 
 
@@ -147,7 +151,7 @@ svg {
 #b1, #b2, #b3 {
     background-color: #000;
     border-radius: 4px;
-    width: clamp(2rem, 5vw, 3rem);
+    width: 3rem;
     color: white;
     font-weight: 700;
     writing-mode: vertical-lr;
